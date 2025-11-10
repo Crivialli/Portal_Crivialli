@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Crivialli</title>
+
+    <link rel="icon" href="Assets/Img/Interface/logo.png" type="image/png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Assets/Css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+</head>
+
+<body>
+    <header>
+        <div id="toggle-theme">
+            <i class="bi bi-moon-stars-fill"></i>
+            <span class="Title">Tema: Escuro</span>
+        </div>
+
+        <a href="">
+            <img class="Logo" src="Assets/Img/Interface/logo-GLPI-250-black.png">
+        </a>
+
+        <div class="containner">
+            <button class="btn abrirPopup plat" type="button" data-popup="platforms-popup">
+                <a href=""></a>
+                <span class="icon"><i class="bi bi-phone"></i></span>
+                <span>Plataformas</span>
+            </button>
+            <button class="btn call" type="button" data-popup="calls-popup">
+                <a href=""></a>
+                <span class="icon"><i class="bi bi-headset"></i></span>
+                <span>Chamados</span>
+            </button>
+            <button class="btn ofc" type="button" data-popup="official-sites-popup">
+                <a href=""></a>
+                <span class="icon"><i class="bi bi-browser-chrome"></i></span>
+                <span>Sites Oficiais</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="popup-overlay" id="popup-overlay"></div>
+
+    <!--<button class="btn crivi" id="config" type="button" data-popup="Configurations">
+        <a href=""></a>
+        <span><i class="bi bi-person-fill"></i></span>
+    </button>-->
+
+    <!--Plataformas/Setores-->  
+    <div class="popups">
+        <div class="popup popup-hidden" id="platforms-popup" aria-hidden="true">
+            <div class="popup-content">
+                <button class="close-button"><i class="bi bi-x-circle"></i></button>
+                <h2>Plataformas</h2>
+                <h3>Selecione seu setor</h3>
+                <div class="button-grid">
+                    <button class="platform-button"><a href="Assets/Html/faturamento.html">
+                        <img src="Assets/Img/Interface/FatLogo.png" alt="">
+                    </a></button>
+                    <button class="platform-button" class="platform-button"><a href="Assets/Html/rh.html">
+                        <img src="Assets/Img/Interface/RHLogo.png" alt="">
+                    </a></button>
+                    <button class="platform-button" class="platform-button"><a href="Assets/Html/contabilidade.html">
+                        <img src="Assets/Img/Interface/ContabilidadeLogo.png" alt="">
+                    </a></button>
+                    <button class="platform-button" class="platform-button"><a href="Assets/Html/compras.html">
+                        <img src="Assets/Img/Interface/ComprasLogo.png" alt="">
+                    </a></button>
+                    <button class="platform-button" class="platform-button"><a href="Assets/Html/financeiro.html">
+                        <img src="Assets/Img/Interface/FinanceiroLogo.png" alt="">
+                    </a></button>
+                    <button class="platform-button" class="platform-button"><a href="Assets/Html/pcp.html">
+                        <img src="Assets/Img/Interface/PcpLogo.png" alt="">
+                    </a></button>
+                    <button class="platform-button" class="platform-button"><a href="Assets/Html/a.r.html">
+                        <img src="Assets/Img/Interface/A.RLogo.png" alt="">
+                    </a></button>
+                    <button class="platform-button" class="platform-button"><a href="Assets/Html/sesmt.html">
+                        <img src="Assets/Img/Interface/SesmtLogo.png" alt="">
+                    </a></button>
+                    <button class="platform-button" class="platform-button"><a href="Assets/Html/ti.html">
+                        <img src="Assets/Img/Interface/TiLogo.png" alt="">
+                    </a></button>
+                </div>
+            </div>    
+        </div>
+
+        <!--Chamados-->
+        <div class="popup popup-hidden" id="calls-popup" aria-hidden="true">
+            <div class="popup-content">
+                <button class="close-button"><i class="bi bi-x-circle"></i></button>
+                <h2>Chamados</h2>
+                <div class="button-grid">
+                    <button class="calls-button"><a href="https://login.sankhya.com.br/?brand_id=360003747033&return_to=https%3A%2F%2Fajuda.sankhya.com.br%2Frequests%2Fnew&timestamp=1758811092" target="_blank">
+                        <img src="Assets/Img/Interface/SankyaLogo.png" alt="">
+                    </a></button>
+                    <button class="calls-button"><a href="https://nstechembarcador.movidesk.com/Account/Login?ReturnUrl=%2f" target="_blank">
+                        <img src="Assets/Img/Interface/FusionLogo.png" alt="">
+                    </a></button>
+                    <button class="calls-button"><a href="http://192.168.0.76/front/central.php" target="_blank">
+                        <img class="glpi" src="Assets/Img/Interface/logo-GLPI-100-white.png" alt="">
+                    </a></button>
+                    <button class="calls-button"><a href="Assets/Html/ramais.html">
+                        <img class="img" src="Assets/Img/Interface/ramais.png" alt="">
+                    </a></button>
+                </div>
+            </div>
+        </div>
+        
+        <!--Sites Oficiais-->
+        <div class="popup popup-hidden" id="official-sites-popup" aria-hidden="true">
+            <div class="popup-content">
+                <button class="close-button"><i class="bi bi-x-circle"></i></button>
+                <h2>Sites Oficiais</h2>
+                <div class="button-grid">
+                    <button class="ramais-button"><a href="https://www.crivialli.com.br" target="_blank">
+                        <img class="img" src="Assets/Img/Interface/CrivLogo.png" alt="">
+                    </a></button>
+                    <button class="ramais-button"><a href="https://h2oevolution.com.br/" target="_blank">
+                        <img class="img" src="Assets/Img/Interface/H2oLogo.png" alt="">
+                    </a></button>
+                </div>
+            </div>
+        </div>
+
+        <!--Config-->
+        <div class="popup popup-hidden config" id="Configurations" aria-hidden="true">
+            <div class="popup-content">
+                <h2>Login</h2>
+                <h4>Usuario:</h4>
+                <h4>Setor:</h4>
+                <button class="Sair">Sair</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="Footer">
+        <p>2025 © Portal Crivialli</p>  
+    </footer>
+
+    <script src="Assets/js/main.js"></script>
+    <script src="Assets/js/theme.js"></script>
+</body>
+
+</html>

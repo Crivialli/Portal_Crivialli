@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* =======================
+   Variáveis Globais
+======================= */
+:root {
+    --font-family: 'Poppins', sans-serif;
+
+    --bg-color: #242323;
+
+    --btn-bg: #2956d1;
+    --btn-hover-bg: #2d0bc4;
+    --btn-color: #fff;
+    --btn-radius: 10px;
+    --btn-padding: 15px 15px 15px 15px;
+    --btn-font-size: 2rem;
+    --btn-hover-shadow: 0 5px 15px #210d7a;
+
+    --animation-slide-in: slideIn 2s ease-out forwards;
+    --animation-fadeup-1: fadeUp 1s ease-out;
+    --animation-fadeup-2: fadeUp 1.5s ease-out;
+    --animation-fadeup-3: fadeUp 2s ease-out;
+
+    --overlay-bg: rgba(0, 0, 0, 0.2);
+    --popup-bg: var(--gradient-white-2, #fff);
+    --popup-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    --popup-radius: 10px;
+
+    --content-bg: #2956d1;
+    --content-color: #fff;
+
+    --button-bg: #4d4d4d;
+    --button-radius: 10px;
+    --button-hover-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* =======================
+   Reset e Base
+======================= */
+* {
+    font-family: var(--font-family);
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.dark-theme {
+    --bg-color: #FFF;
+
+    --btn-bg: #2956d1;
+    --btn-hover-bg: #666;
+    --btn-color: #fff;
+
+    --content-bg: #1f1f1f;
+    --content-color: #f0f0f0;
+
+    --popup-bg: #1c1c1c;
+    --close-color: #fff;
+    --close-hover-color: #aaa;
+
+    --button-bg: #333;
+}
+
+#Home {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: var(--animation-fadeup-1);
+}
+
+#Home:hover {
+    background-color: var(--btn-hover-bg);
+    transform: scale(1.05);
+}
+
+/* =======================
+   Header
+======================= */
+body header {
+    height: calc(100vh - 50px);
+    -ms-overflow-style: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    margin: 0;
+}
+
+/* Logo */
+body header a img.Logo {
+    max-width: 100%;
+    height: 150px;
+    margin: 0;
+    animation: var(--animation-slide-in);
+    padding-bottom: 20px;
+}
+
+/* Container de botões */
+body header div.containner {   
+    justify-content: center;
+    width: 600px;
+    direction: row;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+body header div .btn {
+    width: 100px;
+    height: 100px;
+    background-color: var(--btn-bg);
+    border: none;
+    border-radius: var(--button-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: xx-large;
+    font-weight: 100%;
+    position: relative;
+    animation: var(--animation-fadeup-2);
+    padding: 5px;
+}
+
+
+
+body header div .btn:hover {
+    background-color: var(--btn-hover-bg);
+    box-shadow: var(--btn-hover-shadow);
+    transform: translateY(-5px);
+}
+
+body header div .btn .link , body header div .btn .link img {
+    padding: 8px;
+    height: 100%;
+    width: 100%;
+}
+
+body header div .btn:active {
+    transform: scale(0.95);
+}
+
+body header .containner .btn .Title {
+   color: var(--content-color);
+   visibility: hidden;
+   text-align: center;
+   font-size: small;
+   background: var(--button-bg);
+   padding: 10px;
+   border-radius: 10px;
+   position: absolute;
+   bottom: 100%; 
+   left: 50%;
+   transform: translateX(-50%);
+   white-space: nowrap;
+   margin-bottom: 8px; 
+   z-index: 10;
+   opacity: 0;
+   transition: opacity .5s ease;
+}
+
+/* Aparece quando passa o mouse no botão */
+body header .containner .btn:hover .Title {
+   visibility: visible;
+   opacity: 1;
+}
+
+
+/* =======================
+   Animações
+======================= */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =======================
+   Responsividade
+======================= */
+
+/* Telas até 768px (celulares e tablets em modo paisagem) */
+@media (max-width: 768px) {
+    body header div.containner {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    body header .containner .btn:hover .Title {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    body header div .btn {
+        width: 70px;
+        height: 70px;
+        border-radius: 15px;
+    }
+
+    body header a img.Logo {
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    body header div.containner {
+        width: 100%;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    body header .containner .btn:hover .Title {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    body header div .btn {
+        width: 70px;
+        height: 70px;
+    }
+}
