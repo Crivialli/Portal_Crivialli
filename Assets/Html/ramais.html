@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramais</title>
+
+    <link rel="icon" href="../Img/Interface/ramais.png" type="image/png">
+
+    <link rel="stylesheet" href="../Css/ramais.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header>
+        <a id="Home" href="../../index.html">
+            <i class="bi bi-house-fill"></i>
+        </a>
+
+        <a href="../../index.html">
+            <img class="Logo" src="../Img/Interface/logo-GLPI-250-black.png">
+        </a>
+
+        <div class="containner">
+            <button class="btn crivi" type="button" data-popup="Crivialli-popup">
+                <a href=""></a>
+                <span>Crivialli</span>
+            </button>
+            <button class="btn h2o" type="button" data-popup="H2O-popup">
+                <a href=""></a>
+                <span>H2O</span>
+            </button>
+            <button class="btn log" type="button" data-popup="Logmil-popup">
+                <a href=""></a>
+                <span>Logmil</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="popup-overlay" id="popup-overlay"></div>
+      
+    <div class="popups">
+        <div class="popup popup-hidden" id="Crivialli-popup" aria-hidden="true">
+            <div class="popup-content">
+                <button class="close-button"><i class="bi bi-x-circle"></i></button>
+                <h3>Setores</h3>
+
+                <div class="sectors">
+
+                    <div class="sector-1">
+                        <h2> Assuntos Regulatorios</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Priscila</td>
+                                    <td class="ramal">8056</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Avarias</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Antonio</td>
+                                    <td class="ramal">8053</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Compras</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th class="ramal">Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Alessandro Guaita</td>
+                                    <td class="ramal">8023</td>
+                                </tr>
+                                <tr>
+                                    <td>Alexandre Cesar</td>
+                                    <td class="ramal">8048</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Comercial</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Vinicius</td>
+                                    <td class="ramal">8009</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Contabilidade</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Allesandro Zamberlan</td>
+                                    <td class="ramal">8005</td>
+                                </tr>
+                                <tr>
+                                    <td>Marcos</td>
+                                    <td class="ramal">8040</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Contas a pagar</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Alexandre Seleguim</td>
+                                    <td class="ramal">8007</td>
+                                </tr>
+                                <tr>
+                                    <td>Matheus Hipólio</td>
+                                    <td class="ramal">8054</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Contas a receber</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Luiz Hermínio</td>
+                                    <td class="ramal">8010</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Cozinha</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Letícia</td>
+                                    <td class="ramal">8041</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>C.Q</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Paula/Natanael/Gleydianny</td>
+                                    <td class="ramal">8038</td>
+                                </tr>
+                                <tr>
+                                    <td>Fernanda</td>
+                                    <td class="ramal">8002</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Diretoria</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sandra Cantagali</td>
+                                    <td class="ramal">8008</td>
+                                </tr>
+                                <tr>
+                                    <td>João Cantagali</td>
+                                    <td class="ramal">8012</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Envase</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Adilson</td>
+                                    <td class="ramal">8031</td>
+                                </tr>
+                                <tr>
+                                    <td>Luiz Fernando</td>
+                                    <td class="ramal">8033</td>
+                                </tr>
+                                <tr>
+                                    <td>Mateus Olivera</td>
+                                    <td class="ramal">8065</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Expedição</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th class="ramal">Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Diego</td>
+                                    <td class="ramal">8045</td>
+                                </tr>
+                                <tr>
+                                    <td>Adriano</td>
+                                    <td class="ramal">8046</td>
+                                </tr>
+                                <tr>
+                                    <td>Gabriel</td>
+                                    <td class="ramal">8014</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Expedição A</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Pereira</td>
+                                    <td class="ramal">8025</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Fabricação</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Celio/Luiz</td>
+                                    <td class="ramal">8027</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Faturamento</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th class="ramal">Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Juliano</td>
+                                    <td class="ramal">8017</td>
+                                </tr>
+                                <tr>
+                                    <td>Diogo</td>
+                                    <td class="ramal">8044</td>
+                                </tr>
+                                <tr>
+                                    <td>Elton</td>
+                                    <td class="ramal">8003</td>
+                                </tr>
+                                <tr>
+                                    <td>Lucas Carbone</td>
+                                    <td class="ramal">8036</td>
+                                </tr>
+                                <tr>
+                                    <td>Marcelo Ribeiro</td>
+                                    <td class="ramal">8037</td>
+                                </tr>
+                                <tr>
+                                    <td>Mauro</td>
+                                    <td class="ramal">8042</td>
+                                </tr>
+                                <tr>
+                                    <td>Thiago Guerra</td>
+                                    <td class="ramal">8032</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Frota</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Klelcio/Igor</td>
+                                    <td class="ramal">8026</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Gerente Administrativo</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Evandro</td>
+                                    <td class="ramal">8016</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Gerente Comercial/Marketing</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Giovanni Cantagali</td>
+                                    <td class="ramal">8001</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Gerente de Produção</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Fabio Marques</td>
+                                    <td class="ramal">8034</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Gerente de Vendas</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Midsom</td>
+                                    <td class="ramal">8021</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Gerente Industrial</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Danilo Cantagali</td>
+                                    <td class="ramal">8049</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Manutenção/Oficina</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Rafael</td>
+                                    <td class="ramal">8067</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Marketing</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Flavia/Edmilson</td>
+                                    <td class="ramal">8013</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>PCP</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Roni</td>
+                                    <td class="ramal">8039</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Pesagem</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Edilson/Renato/Lucas M/Ronaldo</td>
+                                    <td class="ramal">8063</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Portaria</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mario/Donizete</td>
+                                    <td class="ramal">8050</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Recebimento</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Guilherme Miguel</td>
+                                    <td class="ramal">8024</td>
+                                </tr>
+                                <tr>
+                                    <td>Silvana</td>
+                                    <td class="ramal">8030</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Recepção</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Andressa/Jessica</td>
+                                    <td class="ramal">8000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>RH</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th class="ramal">Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Elizangela</td>
+                                    <td class="ramal">8022</td>
+                                </tr>
+                                <tr>
+                                    <td>Giovana Silva</td>
+                                    <td class="ramal">8028</td>
+                                </tr>
+                                <tr>
+                                    <td>Giovana Lopes</td>
+                                    <td class="ramal">8019</td>
+                                </tr>
+                                <tr>
+                                    <td>Juliana</td>
+                                    <td class="ramal">8006</td>
+                                </tr>
+                                <tr>
+                                    <td>Tayanne</td>
+                                    <td class="ramal">8047</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>Sesmt</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Alex Martins/Luiz F.</td>
+                                    <td class="ramal">8043</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="sector-1">
+                        <h2>T.I</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Fernando/Gabriel M./Luiz C.</td>
+                                    <td class="ramal">8018</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="popup popup-hidden" id="H2O-popup" aria-hidden="true">
+            <div class="popup-content">
+                <button class="close-button"><i class="bi bi-x-circle"></i></button>
+                <h3>Setores</h3>
+                <div class="sectors">
+                   <div class="sector-1">
+                        <h2>Em Breve</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>-</td>
+                                    <td class="ramal">-</td>
+                                </tr>
+                                <tr>
+                                    <td>-</td>
+                                    <td class="ramal">-</td>
+                                </tr>
+                                <tr>
+                                    <td>-</td>
+                                    <td class="ramal">-</td>
+                                </tr>
+                                <tr>
+                                    <td>-</td>
+                                    <td class="ramal">-</td>
+                                </tr>
+                                <tr>
+                                    <td>-</td>
+                                    <td class="ramal">-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup popup-hidden" id="Logmil-popup" aria-hidden="true">
+            <div class="popup-content">
+                <button class="close-button"><i class="bi bi-x-circle"></i></button>
+                <h3>Setores</h3>
+                <div class="sectors">
+                   <div class="sector-1">
+                        <h2>Logmil</h2>
+                        <table class="excel-style">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Ramal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Airton</td>
+                                    <td class="ramal">8068</td>
+                                </tr>
+                                <tr>
+                                    <td>Bruno/Pedro</td>
+                                    <td class="ramal">8070</td>
+                                </tr>
+                                <tr>
+                                    <td>Julio</td>
+                                    <td class="ramal">8072</td>
+                                </tr>
+                                <tr>
+                                    <td>Lucas Souza</td>
+                                    <td class="ramal">8071</td>
+                                </tr>
+                                <tr>
+                                    <td>Samuel</td>
+                                    <td class="ramal">8069</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/theme.js"></script>
+</body>
+
+</html>

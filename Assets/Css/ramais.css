@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* =======================
+   Variáveis Globais
+======================= */
+:root {
+    --font-family: 'Poppins', sans-serif;
+
+    /* Cores principais */
+    --bg-color: #242323;
+    --bg-body: #242323;
+
+    /* Botões principais */
+    --btn-bg: #2956d1;
+    --btn-bg-crivi: #2956d1;
+    --btn-bg-h2o: green;
+    --btn-bg-log: #504f4f;
+    --btn-hover-bg: #a1a1a7;
+    --btn-color: #fff;
+    --btn-radius: 10px;
+    --btn-padding: 15px 30px 15px 15px;
+    --btn-font-size: 2rem;
+    --btn-hover-shadow: 0 5px 15px #210d7a;
+    --btn-shadow-hover: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    /* Animações */
+    --animation-slide-in: slideIn 2s ease-out forwards;
+    --animation-fadeup-1: fadeUp 1s ease-out;
+    --animation-fadeup-2: fadeUp 1.5s ease-out;
+    --animation-fadeup-3: fadeUp 2s ease-out;
+    --animation-slideIn: slideIn 2.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+
+    /* Logo */
+    --logo-height: 150px;
+
+    /* Popups */
+    --overlay-bg: rgba(0, 0, 0, 0.2);
+    --popup-bg: #fff;
+    --popup-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    --popup-radius: 10px;
+
+    --content-bg: #2956d1;
+    --content-color: #fff;
+
+    --close-color: #fff;
+    --close-hover-color: #ffdddd;
+
+    /* Botões internos do popup */
+    --button-bg: #fff;
+    --button-hover-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --button-radius: 10px;
+
+    /* Setores */
+    --sector-bg: #b7d7f1;
+    --sector-border: 1px solid #000;
+    --sector-radius: 20px;
+
+    /* Excel Table */
+    --excel-head-bg: #2956d1;
+    --excel-row-odd: #4670e4;
+    --excel-row-even: #555353;
+}
+
+/* =======================
+   Reset e Base
+======================= */
+* {
+    font-family: var(--font-family);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-theme {
+    --bg-color: #FFF;
+
+    --btn-bg: #2956d1;
+    --btn-hover-bg: #666;
+    --btn-color: #fff;
+
+    --content-bg: #2956d1;
+    --content-color: #f0f0f0;
+
+    --popup-bg: #1c1c1c;
+    --close-color: #fff;
+    --close-hover-color: #aaa;
+
+    --button-bg: #333;
+}
+
+#Home {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: var(--animation-fadeup-1);
+}
+
+#Home:hover {
+    background-color: var(--btn-hover-bg);
+    transform: scale(1.05);
+}
+
+/* =======================
+   Header
+======================= */
+body header {
+    position: fixed;
+    height: calc(100vh - 50px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+body header a img.Logo {
+    max-width: 100%;
+    height: var(--logo-height);
+    opacity: 0;
+    animation: var(--animation-slideIn);
+}
+
+body header div.containner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+/* =======================
+   Botões
+======================= */
+body header div .btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    color: var(--btn-color);
+    border: none;
+    border-radius: var(--btn-radius);
+    padding: var(--btn-padding);
+    font-size: var(--btn-font-size);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+body header div .btn .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body header div .btn:hover {
+    background-color: var(--btn-hover-bg);
+    transform: translateY(-5px);
+    box-shadow: var(--btn-shadow-hover);
+}
+
+body header div .btn:active {
+    transform: scale(0.95);
+}
+
+/* Botões com cores específicas */
+.crivi {
+    background-color: var(--btn-bg-crivi);
+    animation: var(--animation-fadeup-1);
+}
+
+.h2o {
+    background-color: var(--btn-bg-h2o);
+    animation: var(--animation-fadeup-2);
+}
+
+.log {
+    background-color: var(--btn-bg-log);
+    animation: var(--animation-fadeup-3);
+}
+
+/* =======================
+   Responsivo
+======================= */
+@media (max-width: 768px) {
+    body header div .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: flex-start;
+        padding: 15px 15px;
+    }
+
+    body header div .btn span {
+        flex: 1;
+        text-align: center;
+    }
+
+    body header div .btn .icon {
+        flex: 0;
+        margin-right: auto;
+    }
+}
+
+/* =======================
+   Popup e Overlay
+======================= */
+.popup-overlay {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-bg);
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 90%;
+    max-width: 1000px;
+    background: var(--popup-bg);
+    box-shadow: var(--popup-shadow);
+    border-radius: var(--popup-radius);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 20;
+    border: none;
+}
+
+.popup:not(.popup-hidden) {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-content {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: var(--content-bg);
+    color: var(--content-color);
+    border-radius: var(--popup-radius);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.popup-content a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+    transition: color 0.3s;
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    font-size: xx-large;
+    cursor: pointer;
+    color: var(--close-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.close-button:hover {
+    color: var(--close-hover-color);
+    transform: rotate(90deg) scale(1.5);
+}
+
+/* =======================
+   Grid de Botões no Popup
+======================= */
+.button-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.platform-button,
+.calls-button {
+    width: 100px;
+    height: 100px;
+    background-color: var(--button-bg);
+    border: none;
+    border-radius: var(--button-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.platform-button:hover,
+.calls-button:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--button-hover-shadow);
+}
+
+.platform-button img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+/* =======================
+   Setores
+======================= */
+.sectors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.sector-1 {
+    flex: 1;
+    min-width: 300px;
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: var(--sector-bg);
+    border: var(--sector-border);
+    border-radius: var(--sector-radius);
+    text-align: center;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
+}
+
+.sector-1 h2 {
+    font-size: large;
+    color: black;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+}
+
+/* =======================
+   Títulos e Tabelas
+======================= */
+h3 {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+}
+
+.excel-style {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10%;
+    border-collapse: separate;
+    border-spacing: 1px 0;
+}
+
+.excel-style th {
+    background-color: var(--excel-head-bg);
+    color: black;
+    padding: 8px;
+    text-align: center;
+}
+
+.excel-style td {
+    padding: 8px;
+    text-align: center;
+    word-break: break-word;
+}
+
+.excel-style td.ramal {
+    padding: 8px;
+    width: 5%;   
+    max-width: 90px;    
+    text-align: center;
+    word-break: break-word;
+
+}
+
+
+.excel-style tbody tr:nth-child(odd) {
+    background-color: var(--excel-row-odd);
+}
+
+.excel-style tbody tr:nth-child(even) {
+    background-color: var(--excel-row-even);
+}
+
+.excel-style thead th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.excel-style thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.excel-style tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.excel-style tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+/* =======================
+   Animações
+======================= */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
