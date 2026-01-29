@@ -105,7 +105,7 @@ body header a img.Logo {
 
 /* Container de botões */
 body header div.containner {
-    width: 100%;
+    width: 1000px;
     justify-content: center;
     flex-direction: row;
     display: flex;
@@ -114,6 +114,7 @@ body header div.containner {
     margin: 0;
 }
 
+/* Botões */
 /* Botões */
 body header div .btn {
     background-color: var(--btn-bg);
@@ -126,8 +127,11 @@ body header div .btn {
     display: flex;
     align-items: center;
     gap: 10px;
-    justify-content: flex-start;
+    justify-content: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    box-sizing: border-box;
+    width: 300px;
 }
 
 body header div .btn:hover {
