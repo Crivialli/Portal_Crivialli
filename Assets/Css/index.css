@@ -105,7 +105,7 @@ body header a img.Logo {
 
 /* Container de botões */
 body header div.containner {
-    width: 1000px;
+    width: 100%;
     justify-content: center;
     flex-direction: row;
     display: flex;
